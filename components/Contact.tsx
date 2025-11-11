@@ -6,7 +6,6 @@ import { Mail, Linkedin, Github, Twitter, Send, Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-// import { useToast } from "@/hooks/use-toast";
 import { site, contact } from "@/lib/data";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
@@ -14,7 +13,6 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip
 const socialIcons = { github: Github, linkedin: Linkedin, leetcode: Code };
 
 export const Contact = () => {
-  // const { toast } = useToast();
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
 

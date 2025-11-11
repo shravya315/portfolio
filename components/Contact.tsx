@@ -6,7 +6,7 @@ import { Mail, Linkedin, Github, Twitter, Send, Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
+// import { useToast } from "@/hooks/use-toast";
 import { site, contact } from "@/lib/data";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
@@ -14,7 +14,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip
 const socialIcons = { github: Github, linkedin: Linkedin, leetcode: Code };
 
 export const Contact = () => {
-  const { toast } = useToast();
+  // const { toast } = useToast();
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -22,7 +22,7 @@ export const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setTimeout(() => {
-      toast({ title: "Message sent!", description: contact.successMessage });
+      // toast({ title: "Message sent!", description: contact.successMessage });
       setFormData({ name: "", email: "", message: "" });
       setIsSubmitting(false);
     }, 1000);
@@ -30,7 +30,7 @@ export const Contact = () => {
 
   const copyEmail = () => {
     navigator.clipboard.writeText(site.email);
-    toast({ title: "Copied!", description: "Email copied to clipboard" });
+    // toast({ title: "Copied!", description: "Email copied to clipboard" });
   };
 
   return (
